@@ -1,0 +1,26 @@
+{
+  "name": "san",
+  "version": "1.0.0",
+  "description": "moekosu san test",
+  "main": "index.js",
+  "dependencies": {
+    "san": "^3.5.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moekosu-chenxu/San.baierdu.git"
+  },
+  "author": "moekosu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moekosu-chenxu/San.baierdu/issues"
+  },
+  "homepage": "https://github.com/moekosu-chenxu/San.baierdu#readme"，
+  "devDependencies": {
+	"san": 3.5.x
+  }
+}
