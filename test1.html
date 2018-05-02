@@ -3,7 +3,7 @@
 
 <head>
     <title>Quick Start</title>
-    <script src="https://unpkg.com/san@latest"></script>
+    <script src="node_modules/san/dist/san.dev.js"></script>
 </head>
 
 <body>
@@ -12,14 +12,33 @@
             template: `
                 <div>
                     <input type="text" value="{=name=}">
-                    <p>Hello {{name}}!</p>
+                    <p>Hello {{name | raw}}!</p>
+                    <div><input type="button" value="Alert" onclick="zz()"/></div>
                 </div>
-            `
+            `,
+            initData: function(){
+                return {
+                    width: 200,
+                    height: 20,
+                    isOrder: true,
+                    arr: []
+                };
+            },
+            zz: function(){
+                this.data.set("name", "mo2");
+                console.log(11);
+            },
+            getArr: function(){
+                console.log(this.data.pop("arr"));
+            },
+            setArr: function(str){
+                this.data.push("arr", {username: str});
+            }
         });
 
         let myApp = new MyApp({
             data: {
-                name: 'San'
+                name: 'San<h1>zz</h1>'
             }
         });
         myApp.attach(document.body);
